@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No 3</title>
+    <style>
+.toggle-container {
+  display: inline-block;
+  position: relative;
+}
+
+/* Hilangkan Tampilan Default Checkbox */
+.toggle-container input[type="checkbox"] {
+  display: none;
+}
+
+/* Styling Label untuk Tampilan Toggle */
+.toggle-label {
+  width: 50px;
+  height: 26px;
+  background-color: #f44336; /* Warna merah saat off */
+  display: block;
+  border-radius: 50px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Styling untuk Tombol Bulat di Toggle */
+.toggle-label::before {
+  content: "";
+  width: 22px;
+  height: 22px;
+  background-color: white;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+/* Ketika Checkbox Dicentang (Toggle Aktif) */
+input[type="checkbox"]:checked + .toggle-label {
+  background-color: #4caf50; /* Warna hijau saat on */
+}
+
+input[type="checkbox"]:checked + .toggle-label::before {
+  transform: translateX(24px);
+}
+
+</style>
+</head>
+<body>
+    <div class="toggle-container">
+        <input type="checkbox" id="toggleButton">
+        <label for="toggleButton" class="toggle-label"></label>
+      </div>      
+</body>
+</html>

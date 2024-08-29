@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+          box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+          transition: 0.3s;
+          width: 40%;
+          margin: auto;
+          margin-top: 50px;
+          text-align: center;
+          font-family: Arial, sans-serif;
+        }
+        
+        .card:hover {
+          box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+        
+        .container {
+          padding: 2px 16px;
+        }
+
+        .button {
+            background-color: #04AA6D;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .button.pause {
+            background-color: #f44336;
+        }
+
+        #timer {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="container">
+            <h1 style="text-align: center;">Hitung Mundur</h1>
+            <div id="countdown">
+                <span id="timer">10</span>
+            </div>
+            <input type="button" onclick="startTimer()" value="Start" class="button">
+            <br>
+            <input type="button" onclick="pauseTimer()" value="Pause" class="button pause">
+        </div>
+    </div>
+
+    <script>
+        let countdownNumber = 10;
+        let timerInterval = null;
+
+        function startTimer() {
+            // mengulang amgka ke angka 10 saat tombol mulai di klik kembali 
+            countdownNumber = 10;
+            document.getElementById("timer").innerHTML = countdownNumber;
+
+            clearInterval(timerInterval);
+
+            // mulai menghitung mundur
+            timerInterval = setInterval(() => {
+                countdownNumber -- ;
+                document.getElementById("timer").innerHTML = countdownNumber;
+
+                if (countdownNumber <= 0) {
+                    clearInterval(timerInterval);
+                    document.getElementById("timer").innerText = "Waktu Habis";
+                }
+            }, 1000);
+        }
+
+        // mengaktifkan button pause
+        function pauseTimer() {
+            clearInterval(timerInterval);
+        }
+    </script>
+</body>
+</html>

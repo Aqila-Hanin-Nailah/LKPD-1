@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No 2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e78ebd;
+    color: white;
+    padding: 10px 20px;
+}
+
+.logo {
+    font-size: 1.5em;
+}
+
+img {
+    width: 200px;
+    height: 170px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+}
+
+#products h1 {
+    text-align: center;
+}
+
+.display {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.product {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.product h2 {
+    margin-top: 0;
+}
+
+.readmore {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.readmore:hover {
+    background-color: palevioletred;
+}
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="logo"><i class="fa-solid fa-shop"></i> Toko Kucing</div>
+        <ul class="menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <section id="products">
+        <h1>Produk Kami</h1>
+        <div class="display">
+        <div class="product">
+            <h2>Kucing Ya Allah </h2>
+            <img src="asset/kucing ya Allah.jpg" alt="">
+            <p class="description">Ini deskripsi dari produk 1</p>
+            <p class="total-purchase"><i class="fa-solid fa-cart-shopping"></i> Total Pembelian : 500</p>
+            <p class="total-like"><i class="fa-regular fa-thumbs-up"></i> Total Likes: 150</p>
+            <button class="readmore">Read More</button>
+        </div>
+        <div class="product">
+            <h2>Kucing Duduk</h2>
+            <img src="asset/kucing duduk.jpg" alt="">
+            <p class="description">Ini deskripsi produk 2</p>
+            <p class="total-purchase"><i class="fa-solid fa-cart-shopping"></i> Total Pembelian: 600</p>
+            <p class="total-like"><i class="fa-regular fa-thumbs-up"></i> Total Likes: 348</p>
+            <button class="readmore">Read More</button>
+        </div>
+        <div class="product">
+            <h2>Kucing Nangis</h2>
+            <img src="asset/kucing nangis.jpg" alt="">
+            <p class="description">Ini deskripsi produk 3</p>
+            <p class="total-purchase"><i class="fa-solid fa-cart-shopping"></i> Total Pembelian: 100</p>
+            <p class="total-like"><i class="fa-regular fa-thumbs-up"></i> Total Likes: 250</p>
+            <button class="readmore">Read More</button>
+        </div>
+        </div>
+    </section>
+    <footer>
+        
+    </footer>
+</body>
+</html>
